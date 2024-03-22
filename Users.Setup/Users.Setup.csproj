@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="linq2db" Version="5.4.0" />
+    <PackageReference Include="linq2db.AspNet" Version="5.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+    <PackageReference Include="Rebus" Version="8.2.2" />
+    <PackageReference Include="Rebus.ServiceProvider" Version="10.1.2" />
+    <PackageReference Include="Scrutor" Version="4.2.2" />
+    <PackageReference Include="TinyMapper" Version="3.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modularize\Modularize.csproj" />
+    <ProjectReference Include="..\Users.Api\Users.Api.csproj" />
+    <ProjectReference Include="..\Users.Application\Users.Application.csproj" />
+    <ProjectReference Include="..\Users.Handlers\Users.Handlers.csproj" />
+    <ProjectReference Include="..\Users.Messaging\Users.Messaging.csproj" />
+    <ProjectReference Include="..\Users.Postgres\Users.Postgres.csproj" />
+  </ItemGroup>
+
+</Project>
