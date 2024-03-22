@@ -12,7 +12,7 @@ namespace Users.Api.Users
             _service = service;
         }
 
-        [Route("api/module2/data1")]
+        [Route("api/users/getExternalData")]
         [HttpGet]
         public async Task<IActionResult> GetDataFromExternalModule()
         {
@@ -20,7 +20,7 @@ namespace Users.Api.Users
             return Json(data);
         }
 
-        [Route("api/module2/data2")]
+        [Route("api/users/getUsers")]
         [HttpGet]
         public async Task<IActionResult> GetDataFromDatabase()
         {
