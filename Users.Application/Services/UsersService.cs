@@ -38,7 +38,9 @@ namespace Users.Application.Services
 
         public void Update()
         {
-            _postgresConnection.GetTable<User>().Set(f => f.Name, f => f.Name.ToUpper()).Update();
+            _postgresConnection.GetTable<User>()
+                               .Set(f => f.Name, f => f.Name.ToUpper())
+                               .Update();
         }
     }
 }
