@@ -19,7 +19,7 @@ namespace Users.Handlers.Tests
             {
                 services.AddMediatR(cfg =>
                 {
-                    cfg.RegisterServicesFromAssembly(typeof(UsersCommandHandler).Assembly);
+                    cfg.RegisterServicesFromAssembly(typeof(ExternalNotificationdHandler).Assembly);
                 });
             });
             var db = serviceProvider.GetService<UsersPostgresConnection>();

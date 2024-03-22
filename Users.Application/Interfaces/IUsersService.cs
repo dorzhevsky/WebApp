@@ -6,6 +6,7 @@ namespace Users.Application.Interfaces
     {
         Task<string> GetDataFromExternalModule();
         Task<IEnumerable<User>> GetUsers();
+        void Update();
         Task SendNotification();
     }
 }

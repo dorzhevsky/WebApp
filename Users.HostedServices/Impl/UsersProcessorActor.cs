@@ -2,6 +2,7 @@
 using Akka.Event;
 using Microsoft.Extensions.DependencyInjection;
 using Users.Application.Interfaces;
+using Users.HostedServices.Interfaces;
 
 namespace Users.HostedServices.Impl
 {
@@ -9,7 +10,6 @@ namespace Users.HostedServices.Impl
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly IServiceScope _scope;
-        private readonly IUsersService _usersService;
 
         protected ILoggingAdapter Log { get; } = Context.GetLogger();
 
@@ -18,13 +18,18 @@ namespace Users.HostedServices.Impl
             _serviceProvider = serviceProvider;
             _scope = _serviceProvider.CreateScope();
 
-            _usersService = _scope.ServiceProvider.GetRequiredService<IUsersService>();
+            Receive<ProcessUsers>(HandleProcessUsers);
         }
 
-        protected async override void PreStart()
+        private void HandleProcessUsers(ProcessUsers message)
+        {
+            var usersService = _scope.ServiceProvider.GetRequiredService<IUsersService>();
+            usersService.Update();
+        }
+
+        protected override void PreStart()
         {
             base.PreStart();
-            await _usersService.GetUsers();
         }
 
         protected override void PostStop()

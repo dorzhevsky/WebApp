@@ -47,6 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Handlers", "Extern
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Setup", "External.Setup\External.Setup.csproj", "{F108157F-A370-47A4-8CE6-536AE2735D5D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Api", "External.Api\External.Api.csproj", "{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -125,6 +127,10 @@ Global
 		{F108157F-A370-47A4-8CE6-536AE2735D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F108157F-A370-47A4-8CE6-536AE2735D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F108157F-A370-47A4-8CE6-536AE2735D5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +153,7 @@ Global
 		{7FD35E16-ABDB-41D0-97D7-27C77AF45351} = {A7588F40-6C05-4731-824D-DE8164A1CDF9}
 		{3B22A8C0-B907-492F-8A48-732F376A8685} = {1B7F4476-0F09-4824-A882-E629BEF9EC50}
 		{F108157F-A370-47A4-8CE6-536AE2735D5D} = {1B7F4476-0F09-4824-A882-E629BEF9EC50}
+		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B} = {1B7F4476-0F09-4824-A882-E629BEF9EC50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BEC6354-EE3C-4BBB-90F1-EE74C3D2DD25}

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Modularize;
+using External.Api;
 
 namespace External.Setup
 {
@@ -9,6 +10,7 @@ namespace External.Setup
     {
         public void RegisterControllers(IMvcBuilder builder, IConfiguration _configuration)
         {
+            builder.AddApp();
         }
 
         public void RegisterMappings(IConfiguration configuration)

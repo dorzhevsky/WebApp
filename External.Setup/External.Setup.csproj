@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\External.Api\External.Api.csproj" />
     <ProjectReference Include="..\External.Handlers\External.Handlers.csproj" />
     <ProjectReference Include="..\Modularize\Modularize.csproj" />
   </ItemGroup>

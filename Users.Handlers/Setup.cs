@@ -9,7 +9,7 @@ namespace Users.Handlers
     {
         public static void RegisterMediatrHandlers(this MediatRServiceConfiguration cfg)
         {
-            cfg.RegisterServicesFromAssemblies(typeof(UsersCommandHandler).Assembly);
+            cfg.RegisterServicesFromAssemblies(typeof(ExternalNotificationdHandler).Assembly);
         }
 
         public static void RegisterMappings()

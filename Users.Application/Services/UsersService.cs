@@ -35,5 +35,10 @@ namespace Users.Application.Services
         {
             await _bus.Publish(new UserDeletedNotification());
         }
+
+        public void Update()
+        {
+            _postgresConnection.GetTable<User>().Set(f => f.Name, f => f.Name.ToUpper()).Update();
+        }
     }
 }
