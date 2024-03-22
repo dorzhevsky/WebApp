@@ -10,9 +10,11 @@
     <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
+    <PackageReference Include="Rebus" Version="8.2.4" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Messages\Messages.csproj" />
     <ProjectReference Include="..\Users.Application\Users.Application.csproj" />
   </ItemGroup>
 

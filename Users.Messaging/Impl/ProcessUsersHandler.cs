@@ -14,7 +14,7 @@ namespace Users.Messaging.Impl
 
         public Task Handle(Messages.ProcessUsers @event)
         {
-            _usersHostedService.Tell(new HostedServices.Interfaces.ProcessUsers());
+            _usersHostedService.Tell(new ProcessUsers());
             return Task.CompletedTask;
         }
     }
