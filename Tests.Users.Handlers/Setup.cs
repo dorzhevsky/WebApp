@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Users.Application;
-using Users.Postgres;
+using Modularize;
+using Users.Services.Module;
 
 namespace Users.Handlers.Tests
 {
@@ -9,15 +9,17 @@ namespace Users.Handlers.Tests
     {
         public static ServiceProvider Init(Action<IServiceCollection> afterAction)
         {
-            Users.Handlers.Setup.RegisterMappings();
-
             IServiceCollection services = new ServiceCollection();
 
             IConfiguration config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 
             services.AddSingleton(config);
-            services.RegisterServices();
-            services.RegisterPostgres(config);
+
+            services.AddModularizer(config,
+                typeof(Modules).Assembly,
+                typeof(Postgres.Module.Modules).Assembly,
+                typeof(Handlers.Module.Modules).Assembly
+            );
 
             afterAction(services);
 

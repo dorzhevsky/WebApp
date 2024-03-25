@@ -1,4 +1,4 @@
-﻿namespace WebApp
+﻿namespace Modularize
 {
     internal static class Extensions
     {

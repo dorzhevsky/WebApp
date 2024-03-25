@@ -1,4 +1,4 @@
-﻿using External.Contracts;
+﻿using Contracts.Modules.External;
 using MediatR;
 using Messages;
 using Microsoft.AspNetCore.Mvc;

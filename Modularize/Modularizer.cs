@@ -1,24 +1,53 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
 
 namespace Modularize
 {
     public static class Modularizer
     {
-        public static IEnumerable<IConfigurationModule> LoadFromConfiguration(IConfiguration configuration)
+        public static void AddModularizer(this IServiceCollection services, 
+                                          IConfiguration configuration, 
+                                          params Assembly[] assemblies)
         {
-            ModuleOptions? modules = configuration.Get<ModuleOptions>();
+            var allTypes = (from a in assemblies from t in a.GetTypes() select t).ToList();
 
-            if (modules is not null)
+
+            IMvcBuilder builder = services.AddControllers();
+
+            (
+                from t in allTypes
+                where typeof(IControllersModule).IsAssignableFrom(t) && !t.IsAbstract
+                select (IControllersModule?)Activator.CreateInstance(t)
+            ).Each(module => module.RegisterControllers(builder, configuration));
+
+            (
+                from t in allTypes
+                where typeof(IMappingModule).IsAssignableFrom(t) && !t.IsAbstract
+                select (IMappingModule?)Activator.CreateInstance(t)
+            ).Each(module => module.RegisterMappings(configuration));
+
+
+            (
+                from t in allTypes
+                where typeof(IServicesModule).IsAssignableFrom(t) && !t.IsAbstract
+                select (IServicesModule?)Activator.CreateInstance(t)
+            ).Each(module => module.RegisterServices(services, configuration));
+
+            services.AddMediatR(cfg =>
             {
-                return modules.Modules.Select(e =>
-                {
-                    Type? type = Type.GetType(e.Type);
-                    return type is not null ? (IConfigurationModule?)Activator.CreateInstance(type) : null;
-                }).Where(e => e is not null)
-                .Cast<IConfigurationModule>();
-            }
+                (
+                    from t in allTypes
+                    where typeof(IMediatrModule).IsAssignableFrom(t) && !t.IsAbstract
+                    select (IMediatrModule?)Activator.CreateInstance(t)
+                ).Each(module => module.RegisterMediatrHandlers(cfg, configuration));
+            });
 
-            return Enumerable.Empty<IConfigurationModule>();
+            (
+                from t in allTypes
+                where typeof(IRebusModule).IsAssignableFrom(t) && !t.IsAbstract
+                select (IRebusModule?)Activator.CreateInstance(t)
+            ).Each(module => module.RegisterRebusHandlers(services, configuration));
         }
     }
 }

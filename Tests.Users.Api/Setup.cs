@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Users.Application;
-using Users.Postgres;
+using Postgres = Users.Postgres.Module;
+using Svc = Users.Services.Module;
+using Handlers = Users.Handlers.Module;
+using Modularize;
 
 namespace Tests.Users.Api
 {
@@ -14,8 +16,12 @@ namespace Tests.Users.Api
             IConfiguration config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 
             services.AddSingleton(config);
-            services.RegisterServices();
-            services.RegisterPostgres(config);
+
+            services.AddModularizer(config,
+                typeof(Postgres.Modules).Assembly,
+                typeof(Svc.Modules).Assembly,
+                typeof(Handlers.Modules).Assembly
+            );
 
             afterAction(services);
 

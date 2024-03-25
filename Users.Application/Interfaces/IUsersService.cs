@@ -1,6 +1,6 @@
 ﻿using Users.Domain;
 
-namespace Users.Application.Interfaces
+namespace Users.Services.Interfaces
 {
     public interface IUsersService
     {

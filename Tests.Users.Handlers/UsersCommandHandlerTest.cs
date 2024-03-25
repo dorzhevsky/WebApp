@@ -6,7 +6,7 @@ using LinqToDb.Extensions;
 using LinqToDB;
 using Users.Postgres;
 using Users.Domain;
-using Users.Contracts;
+using Contracts.Modules.Users;
 
 namespace Users.Handlers.Tests
 {
@@ -15,15 +15,9 @@ namespace Users.Handlers.Tests
         [Test]
         public async Task Test1()
         {
-            var serviceProvider = Setup.Init(services =>
-            {
-                services.AddMediatR(cfg =>
-                {
-                    cfg.RegisterServicesFromAssembly(typeof(ExternalNotificationdHandler).Assembly);
-                });
-            });
+            var serviceProvider = Setup.Init(services => {});
             var db = serviceProvider.GetService<UsersPostgresConnection>();
-            db.DropCreateTables();
+            db.RecreateTables();
             db.Insert(new User { Id = 1, Name = "test" });
 
             var mediator = serviceProvider.GetService<IMediator>();

@@ -4,7 +4,7 @@ namespace LinqToDb.Extensions
 {
     public static class Linq2DbExtensions
     {
-        public static void DropCreateTables(this IDataContext connection)
+        public static void RecreateTables(this IDataContext connection)
         {
             var types = connection.MappingSchema.GetDefinedTypes();
 

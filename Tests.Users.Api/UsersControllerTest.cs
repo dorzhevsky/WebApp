@@ -10,7 +10,8 @@ using LinqToDb.Extensions;
 using Users.Postgres;
 using Users.Domain;
 using Users.Api.Users;
-using Users.Contracts;
+using Contracts.Modules.Users;
+using Contracts.Modules.External;
 
 namespace Tests.Users.Api
 {
@@ -25,11 +26,13 @@ namespace Tests.Users.Api
                 mediator
                     .Setup(i => i.Send(It.IsAny<GetExternalData>(), It.IsAny<CancellationToken>()))
                     .Returns(Task.FromResult("Some data"));
+
                 services.AddSingleton(s => mediator.Object);
 
                 services.AddTransient<UsersController>();
             });
             var controller = serviceProvider.GetService<UsersController>();
+            var m = serviceProvider.GetService<IMediator>();
             IActionResult data = await controller.GetDataFromExternalModule();
             var jsonResult = data as JsonResult;
             Assert.That(jsonResult, Is.Not.Null);
@@ -46,7 +49,7 @@ namespace Tests.Users.Api
                 services.AddTransient<UsersController>();
             });
             var db = serviceProvider.GetService<UsersPostgresConnection>();
-            db.DropCreateTables();
+            db.RecreateTables();
             db.Insert(new User { Id = 1, Name = "test1" });
 
             var controller = serviceProvider.GetService<UsersController>();
@@ -67,7 +70,7 @@ namespace Tests.Users.Api
                 services.AddTransient<UsersController>();
             });
             var db = serviceProvider.GetService<UsersPostgresConnection>();
-            db.DropCreateTables();
+            db.RecreateTables();
             db.Insert(new User { Id = 1, Name = "test" });
 
             var controller = serviceProvider.GetService<UsersController>();

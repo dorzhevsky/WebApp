@@ -37,8 +37,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LinqToDb.Extensions\LinqToDb.Extensions.csproj" />
-    <ProjectReference Include="..\Users.Application\Users.Application.csproj" />
-    <ProjectReference Include="..\Users.Contracts\Users.Contracts.csproj" />
+    <ProjectReference Include="..\Users.Application\Users.Services.csproj" />
     <ProjectReference Include="..\Users.Handlers\Users.Handlers.csproj" />
     <ProjectReference Include="..\Users.Postgres\Users.Postgres.csproj" />
   </ItemGroup>

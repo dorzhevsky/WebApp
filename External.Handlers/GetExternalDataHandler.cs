@@ -1,4 +1,4 @@
-﻿using Contracts;
+﻿using Contracts.Modules.External;
 using MediatR;
 
 namespace External.Handlers

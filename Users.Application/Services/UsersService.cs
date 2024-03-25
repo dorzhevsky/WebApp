@@ -1,12 +1,12 @@
-﻿using Contracts;
+﻿using Contracts.Modules.External;
+using Contracts.Modules.Users;
 using LinqToDB;
 using MediatR;
-using Users.Application.Interfaces;
-using Users.Contracts;
 using Users.Domain;
 using Users.Postgres;
+using Users.Services.Interfaces;
 
-namespace Users.Application.Services
+namespace Users.Services.Services
 {
     internal class UsersService : IUsersService, IService
     {

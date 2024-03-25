@@ -1,6 +1,6 @@
-﻿using External.Contracts;
+﻿using Contracts.Modules.External;
 using MediatR;
-using Users.HostedServices.Interfaces;
+using Users.Services.Interfaces;
 
 namespace Users.Handlers
 {

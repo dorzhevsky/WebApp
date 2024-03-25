@@ -1,7 +1,7 @@
-﻿using MediatR;
+﻿using Contracts.Modules.Users;
+using MediatR;
 using Nelibur.ObjectMapper;
-using Users.Application.Interfaces;
-using Users.Contracts;
+using Users.Services.Interfaces;
 
 namespace Users.Handlers
 {

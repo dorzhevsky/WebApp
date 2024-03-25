@@ -10,10 +10,10 @@
     <PackageReference Include="linq2db" Version="5.4.0" />
     <PackageReference Include="linq2db.AspNet" Version="5.4.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Modularize\Modularize.csproj" />
     <ProjectReference Include="..\Users.Domain\Users.Domain.csproj" />
   </ItemGroup>
 
