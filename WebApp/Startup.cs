@@ -16,13 +16,11 @@ namespace WebApp
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRebus((configurer, _) => configurer
-                .Transport(t => t.UseRabbitMq("amqp://garda:123asdZXC$@192.168.36.111:34607", "webapp")
-                .ExchangeNames(directExchangeName: "WebAppDirect", topicExchangeName: "WebAppTopic"))
-                .Serialization(s => s.UseNewtonsoftJson(JsonInteroperabilityMode.FullTypeInformation))
-                .Options(o =>
-                {
-                }));
+            services.AddRebus((configurer, _) => 
+            configurer.Transport(t => t.UseRabbitMq(_configuration.GetConnectionString("Rabbit"), "webapp")
+                      .ExchangeNames(directExchangeName: "WebAppDirect", topicExchangeName: "WebAppTopic"))
+                      .Serialization(s => s.UseNewtonsoftJson(JsonInteroperabilityMode.FullTypeInformation))
+                      .Options(o => {}));
 
             services.AddModularizer(_configuration, 
                 typeof(Users.Api.Modularize.Modules).Assembly,
