@@ -1,7 +1,9 @@
 ﻿using Akka.Actor;
 using Akka.Event;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Users.Services.Interfaces;
+using Users.Services.Messages;
 
 namespace Users.Services.Services
 {
@@ -22,8 +24,8 @@ namespace Users.Services.Services
 
         private void HandleProcessUsers(ProcessUsers message)
         {
-            var usersService = _scope.ServiceProvider.GetRequiredService<IUsersService>();
-            usersService.Update();
+            var mediator = _scope.ServiceProvider.GetRequiredService<IMediator>();
+            mediator.Publish(new UpdateUsers());
         }
 
         protected override void PreStart()

@@ -5,10 +5,11 @@ using MediatR;
 using Users.Domain;
 using Users.Postgres;
 using Users.Services.Interfaces;
+using Users.Services.Messages;
 
 namespace Users.Services.Services
 {
-    internal class UsersService : IUsersService, IService
+    internal class UsersService : IUsersService, IService, INotificationHandler<UpdateUsers>
     {
         private readonly IMediator _bus;
         private readonly UsersPostgresConnection _postgresConnection;
@@ -36,7 +37,7 @@ namespace Users.Services.Services
             await _bus.Publish(new UserDeletedNotification());
         }
 
-        public void Update()
+        public async Task Handle(UpdateUsers notification, CancellationToken cancellationToken)
         {
             _postgresConnection.GetTable<User>()
                                .Set(f => f.Name, f => f.Name.ToUpper())
