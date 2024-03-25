@@ -14,7 +14,7 @@ namespace Users.Postgres.Modularize
             {
                 services.AddLinqToDBContext<UsersPostgresConnection>((provider, options) => options
                                 .UsePostgreSQL(configuration.GetConnectionString("Garda"))
-                                .UseMappingSchema(Schema.GetSchema()));
+                                .UseMappingSchema(Schema.Schema.GetSchema()));
             }
         }
     }
