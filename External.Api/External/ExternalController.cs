@@ -1,6 +1,6 @@
-﻿using Contracts.Modules.External;
+﻿using Contracts;
+using Contracts.Modules.External;
 using MediatR;
-using Messages;
 using Microsoft.AspNetCore.Mvc;
 using Rebus.Bus;
 

@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Contracts\Contracts.csproj" />
     <ProjectReference Include="..\Messages\Contracts.csproj" />
     <ProjectReference Include="..\Modularize\Modularize.csproj" />
     <ProjectReference Include="..\Users.Domain\Users.Domain.csproj" />

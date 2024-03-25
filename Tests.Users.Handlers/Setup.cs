@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Modularize;
-using Users.Services.Module;
 
 namespace Users.Handlers.Tests
 {
@@ -16,9 +15,9 @@ namespace Users.Handlers.Tests
             services.AddSingleton(config);
 
             services.AddModularizer(config,
-                typeof(Modules).Assembly,
+                typeof(Services.Module.Modules).Assembly,
                 typeof(Postgres.Module.Modules).Assembly,
-                typeof(Handlers.Module.Modules).Assembly
+                typeof(Module.Modules).Assembly
             );
 
             afterAction(services);

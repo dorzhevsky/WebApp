@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modularize", "Modularize\Mo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Api", "Users.Api\Users.Api.csproj", "{98947192-377F-4B1B-9606-F26E5D073376}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Services", "Users.Application\Users.Services.csproj", "{17A722C4-2A21-47CD-B3A1-4A60FB3B6B87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Services", "Users.Services\Users.Services.csproj", "{17A722C4-2A21-47CD-B3A1-4A60FB3B6B87}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Domain", "Users.Domain\Users.Domain.csproj", "{C20DF2D8-C11A-4F6F-8F5B-5E41E3154FA8}"
 EndProject
@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Postgres", "Users.Pos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Handlers", "Users.Handlers\Users.Handlers.csproj", "{492EBDC1-F5CD-49B9-B5E2-82C894ABA6D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Messages\Contracts.csproj", "{BE29DB82-8C80-450C-A120-0CE161BA9AD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{BE29DB82-8C80-450C-A120-0CE161BA9AD8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{83BDAA81-5554-43FC-8AAA-6B839CACA812}"
 EndProject
