@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
-    <ProjectReference Include="..\Messages\Contracts.csproj" />
     <ProjectReference Include="..\Modularize\Modularize.csproj" />
   </ItemGroup>
 

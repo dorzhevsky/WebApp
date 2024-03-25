@@ -6,7 +6,7 @@ using Nelibur.ObjectMapper;
 using Rebus.Config;
 using Users.Domain;
 
-namespace Users.Handlers.Module
+namespace Users.Handlers.Modularize
 {
     public class Modules
     {

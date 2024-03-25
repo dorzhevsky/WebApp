@@ -15,9 +15,9 @@ namespace Users.Handlers.Tests
             services.AddSingleton(config);
 
             services.AddModularizer(config,
-                typeof(Services.Module.Modules).Assembly,
-                typeof(Postgres.Module.Modules).Assembly,
-                typeof(Module.Modules).Assembly
+                typeof(Services.Modularize.Modules).Assembly,
+                typeof(Postgres.Modularize.Modules).Assembly,
+                typeof(Handlers.Modularize.Modules).Assembly
             );
 
             afterAction(services);

@@ -4,7 +4,7 @@ using Modularize;
 using Users.Services.Interfaces;
 using Users.Services.Services;
 
-namespace Users.Services.Module
+namespace Users.Services.Modularize
 {
     public class Modules
     {

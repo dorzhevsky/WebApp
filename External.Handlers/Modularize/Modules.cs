@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Modularize;
 
-namespace External.Handlers.Module
+namespace External.Handlers.Modularize
 {
     public class Modules
     {

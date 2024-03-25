@@ -1,9 +1,9 @@
-﻿using External.Api.External;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Modularize;
+using Users.Api.Users;
 
-namespace External.Api.Module
+namespace Users.Api.Modularize
 {
     public class Modules
     {
@@ -11,7 +11,7 @@ namespace External.Api.Module
         {
             public void RegisterControllers(IMvcBuilder builder, IConfiguration _configuration)
             {
-                builder.AddApplicationPart(typeof(ExternalController).Assembly);
+                builder.AddApplicationPart(typeof(UsersController).Assembly);
             }
         }
     }

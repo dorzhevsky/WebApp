@@ -25,13 +25,12 @@ namespace WebApp
                 }));
 
             services.AddModularizer(_configuration, 
-                typeof(Users.Api.Module.Modules).Assembly,
-                typeof(Users.Handlers.Module.Modules).Assembly,
-                typeof(Users.Services.Module.Modules).Assembly,
-                typeof(Users.Postgres.Module.Modules).Assembly,         
-                
-                typeof(External.Api.Module.Modules).Assembly,
-                typeof(External.Handlers.Module.Modules).Assembly
+                typeof(Users.Api.Modularize.Modules).Assembly,
+                typeof(Users.Handlers.Modularize.Modules).Assembly,
+                typeof(Users.Services.Modularize.Modules).Assembly,
+                typeof(Users.Postgres.Modularize.Modules).Assembly,                
+                typeof(External.Api.Modularize.Modules).Assembly,
+                typeof(External.Handlers.Modularize.Modules).Assembly
             );
         }
 

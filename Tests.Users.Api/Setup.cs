@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Postgres = Users.Postgres.Module;
-using Svc = Users.Services.Module;
-using Handlers = Users.Handlers.Module;
+using Pg = Users.Postgres.Modularize;
+using Svc = Users.Services.Modularize;
+using Handlers = Users.Handlers.Modularize;
 using Modularize;
 
 namespace Tests.Users.Api
@@ -18,7 +18,7 @@ namespace Tests.Users.Api
             services.AddSingleton(config);
 
             services.AddModularizer(config,
-                typeof(Postgres.Modules).Assembly,
+                typeof(Pg.Modules).Assembly,
                 typeof(Svc.Modules).Assembly,
                 typeof(Handlers.Modules).Assembly
             );
