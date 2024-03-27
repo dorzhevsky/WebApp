@@ -1,7 +1,7 @@
 ﻿using Rebus.Handlers;
-using Users.Services.Interfaces;
+using Users.Core.Services.Interfaces;
 
-namespace Users.Handlers
+namespace Users.Adapter.Handlers
 {
     internal sealed class ProcessUsersHandler : IHandleMessages<ProcessUsers>
     {

@@ -7,11 +7,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using Snapper.Nunit;
 using LinqToDb.Extensions;
-using Users.Postgres;
-using Users.Domain;
-using Users.Api.Users;
+using Users.Core.Domain;
 using Contracts.Modules.Users;
 using Contracts.Modules.External;
+using Users.Adapter.Api.Users;
+using Users.Adapter.Postgres;
 
 namespace Tests.Users.Api
 {

@@ -1,6 +1,6 @@
 ﻿using LinqToDB.Mapping;
 
-namespace Users.Postgres.Schema
+namespace Users.Adapter.Postgres.Schema
 {
     internal static class Schema
     {

@@ -1,9 +1,9 @@
-﻿using External.Api.External;
+﻿using External.Adapter.Api.External;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Modularize;
 
-namespace External.Api.Modularize
+namespace External.Adapter.Api.Modularize
 {
     public class Modules
     {

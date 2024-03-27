@@ -1,8 +1,8 @@
 ﻿using Contracts.Modules.External;
 using MediatR;
-using Users.Services.Interfaces;
+using Users.Core.Services.Interfaces;
 
-namespace Users.Handlers
+namespace Users.Adapter.Handlers
 {
     public class ExternalNotificationdHandler : INotificationHandler<ExternalNotification>
     {

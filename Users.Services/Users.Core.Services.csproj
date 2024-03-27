@@ -17,8 +17,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
     <ProjectReference Include="..\Modularize\Modularize.csproj" />
-    <ProjectReference Include="..\Users.Domain\Users.Domain.csproj" />
-    <ProjectReference Include="..\Users.Postgres\Users.Postgres.csproj" />
+    <ProjectReference Include="..\Users.Domain\Users.Core.Domain.csproj" />
+    <ProjectReference Include="..\Users.Postgres\Users.Adapter.Postgres.csproj" />
   </ItemGroup>
 
 </Project>

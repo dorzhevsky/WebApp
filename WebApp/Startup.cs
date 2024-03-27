@@ -23,12 +23,12 @@ namespace WebApp
                       .Options(o => {}));
 
             services.AddModularizer(_configuration, 
-                typeof(Users.Api.Modularize.Modules).Assembly,
-                typeof(Users.Handlers.Modularize.Modules).Assembly,
-                typeof(Users.Services.Modularize.Modules).Assembly,
-                typeof(Users.Postgres.Modularize.Modules).Assembly,                
-                typeof(External.Api.Modularize.Modules).Assembly,
-                typeof(External.Handlers.Modularize.Modules).Assembly
+                typeof(Users.Adapter.Api.Modularize.Modules).Assembly,                
+                typeof(Users.Core.Services.Modularize.Modules).Assembly,
+                typeof(Users.Adapter.Handlers.Modularize.Modules).Assembly,
+                typeof(Users.Adapter.Postgres.Modularize.Modules).Assembly,                
+                typeof(External.Adapter.Api.Modularize.Modules).Assembly,
+                typeof(External.Adapter.Handlers.Modularize.Modules).Assembly
             );
         }
 

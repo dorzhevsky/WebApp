@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Modularize;
 using Nelibur.ObjectMapper;
 using Rebus.Config;
-using Users.Domain;
+using Users.Core.Domain;
 
-namespace Users.Handlers.Modularize
+namespace Users.Adapter.Handlers.Modularize
 {
     public class Modules
     {

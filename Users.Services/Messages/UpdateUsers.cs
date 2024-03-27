@@ -1,8 +1,8 @@
 ﻿using MediatR;
 
-namespace Users.Services.Messages
+namespace Users.Core.Services.Messages
 {
-    internal class UpdateUsers: INotification
+    internal class UpdateUsers : INotification
     {
     }
 }

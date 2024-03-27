@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Users.Services.Interfaces;
+using Users.Core.Services.Interfaces;
 
-namespace Users.Api.Users
+namespace Users.Adapter.Api.Users
 {
     public class UsersController : Controller
     {

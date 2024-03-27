@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Modularize;
-using Users.Services.Interfaces;
-using Users.Services.Services;
+using Users.Core.Services.Interfaces;
+using Users.Core.Services.Services;
 
-namespace Users.Services.Modularize
+namespace Users.Core.Services.Modularize
 {
     public class Modules
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Modularize;
-using Users.Api.Users;
+using Users.Adapter.Api.Users;
 
-namespace Users.Api.Modularize
+namespace Users.Adapter.Api.Modularize
 {
     public class Modules
     {

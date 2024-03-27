@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Modularize;
 using LinqToDB;
 
-namespace Users.Postgres.Modularize
+namespace Users.Adapter.Postgres.Modularize
 {
     public class Modules
     {

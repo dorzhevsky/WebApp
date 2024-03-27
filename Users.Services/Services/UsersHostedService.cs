@@ -1,9 +1,9 @@
 ﻿using Akka.Actor;
 using Akka.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Users.Services.Interfaces;
+using Users.Core.Services.Interfaces;
 
-namespace Users.Services.Services
+namespace Users.Core.Services.Services
 {
     internal sealed class UsersHostedService : IHostedService, IUsersHostedService
     {

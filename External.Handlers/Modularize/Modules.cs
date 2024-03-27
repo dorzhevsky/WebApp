@@ -1,8 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using External.Adapter.Handlers;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Modularize;
 
-namespace External.Handlers.Modularize
+namespace External.Adapter.Handlers.Modularize
 {
     public class Modules
     {

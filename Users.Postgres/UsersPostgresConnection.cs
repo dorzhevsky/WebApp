@@ -1,7 +1,7 @@
 ﻿using LinqToDB;
 using LinqToDB.Data;
 
-namespace Users.Postgres
+namespace Users.Adapter.Postgres
 {
     public class UsersPostgresConnection : DataConnection
     {

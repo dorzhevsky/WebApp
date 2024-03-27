@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Rebus.Bus;
 
-namespace External.Api.External
+namespace External.Adapter.Api.External
 {
     public class ExternalController : Controller
     {

@@ -2,10 +2,10 @@
 using Akka.Event;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Users.Services.Interfaces;
-using Users.Services.Messages;
+using Users.Core.Services.Interfaces;
+using Users.Core.Services.Messages;
 
-namespace Users.Services.Services
+namespace Users.Core.Services.Services
 {
     internal class UsersProcessorActor : ReceiveActor
     {

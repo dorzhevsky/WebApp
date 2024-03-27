@@ -2,12 +2,12 @@
 using Contracts.Modules.Users;
 using LinqToDB;
 using MediatR;
-using Users.Domain;
-using Users.Postgres;
-using Users.Services.Interfaces;
-using Users.Services.Messages;
+using Users.Adapter.Postgres;
+using Users.Core.Domain;
+using Users.Core.Services.Interfaces;
+using Users.Core.Services.Messages;
 
-namespace Users.Services.Services
+namespace Users.Core.Services.Services
 {
     internal class UsersService : IUsersService, IService, INotificationHandler<UpdateUsers>
     {

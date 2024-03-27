@@ -1,6 +1,6 @@
-﻿using Users.Domain;
+﻿using Users.Core.Domain;
 
-namespace Users.Services.Interfaces
+namespace Users.Core.Services.Interfaces
 {
     public interface IUsersService
     {

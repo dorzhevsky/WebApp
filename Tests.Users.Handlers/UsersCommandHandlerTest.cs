@@ -4,9 +4,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Snapper.Nunit;
 using LinqToDb.Extensions;
 using LinqToDB;
-using Users.Postgres;
-using Users.Domain;
+using Users.Core.Domain;
 using Contracts.Modules.Users;
+using Users.Adapter.Postgres;
 
 namespace Users.Handlers.Tests
 {

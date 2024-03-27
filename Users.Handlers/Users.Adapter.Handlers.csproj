@@ -15,8 +15,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Contracts\Contracts.csproj" />
-    <ProjectReference Include="..\Users.Domain\Users.Domain.csproj" />
-    <ProjectReference Include="..\Users.Services\Users.Services.csproj" />
+    <ProjectReference Include="..\Users.Domain\Users.Core.Domain.csproj" />
+    <ProjectReference Include="..\Users.Services\Users.Core.Services.csproj" />
   </ItemGroup>
 
 </Project>

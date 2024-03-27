@@ -1,7 +1,7 @@
 ﻿using Contracts.Modules.External;
 using MediatR;
 
-namespace External.Handlers
+namespace External.Adapter.Handlers
 {
     public class GetExternalDataHandler : IRequestHandler<GetExternalData, string>
     {

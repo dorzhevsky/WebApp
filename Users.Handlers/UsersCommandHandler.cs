@@ -1,9 +1,9 @@
 ﻿using Contracts.Modules.Users;
 using MediatR;
 using Nelibur.ObjectMapper;
-using Users.Services.Interfaces;
+using Users.Core.Services.Interfaces;
 
-namespace Users.Handlers
+namespace Users.Adapter.Handlers
 {
     public class UsersCommandHandler : IRequestHandler<GetUsersCommand, IEnumerable<UserDto>>
     {

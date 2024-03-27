@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Pg = Users.Postgres.Modularize;
-using Svc = Users.Services.Modularize;
-using Handlers = Users.Handlers.Modularize;
+using Pg = Users.Adapter.Postgres.Modularize;
+using Svc = Users.Core.Services.Modularize;
+using Handlers = Users.Adapter.Handlers.Modularize;
 using Modularize;
 
 namespace Tests.Users.Api
