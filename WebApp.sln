@@ -31,9 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Handlers.Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqToDb.Extensions", "LinqToDb.Extensions\LinqToDb.Extensions.csproj", "{CAB52FF8-53DB-48B6-8311-B0D8115B9A7E}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{F341F203-E3E8-4409-A52E-6F21E29D4F9A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__shared__", "__shared__", "{F341F203-E3E8-4409-A52E-6F21E29D4F9A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{41485EB5-364C-433B-A4E9-CFF22CCF7941}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__domain__", "__domain__", "{41485EB5-364C-433B-A4E9-CFF22CCF7941}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{4FBBDF98-58E8-40BB-88B7-380B3C5F17F2}"
 EndProject
