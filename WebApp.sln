@@ -11,35 +11,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "users", "users", "{A7588F40
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modularize", "Modularize\Modularize.csproj", "{761CBA53-0481-495F-A1AA-100C2C365900}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Api", "Users.Api\Users.Adapter.Api.csproj", "{98947192-377F-4B1B-9606-F26E5D073376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Api", "Users.Adapter.Api\Users.Adapter.Api.csproj", "{98947192-377F-4B1B-9606-F26E5D073376}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Core.Services", "Users.Services\Users.Core.Services.csproj", "{17A722C4-2A21-47CD-B3A1-4A60FB3B6B87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Core.Services", "Users.Core.Services\Users.Core.Services.csproj", "{17A722C4-2A21-47CD-B3A1-4A60FB3B6B87}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Core.Domain", "Users.Domain\Users.Core.Domain.csproj", "{C20DF2D8-C11A-4F6F-8F5B-5E41E3154FA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Core.Domain", "Users.Core.Domain\Users.Core.Domain.csproj", "{C20DF2D8-C11A-4F6F-8F5B-5E41E3154FA8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Postgres", "Users.Postgres\Users.Adapter.Postgres.csproj", "{E5987BD6-3658-46B0-933B-CBA894119A54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Postgres", "Users.Adapter.Postgres\Users.Adapter.Postgres.csproj", "{E5987BD6-3658-46B0-933B-CBA894119A54}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Handlers", "Users.Handlers\Users.Adapter.Handlers.csproj", "{492EBDC1-F5CD-49B9-B5E2-82C894ABA6D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Handlers", "Users.Adapter.Handlers\Users.Adapter.Handlers.csproj", "{492EBDC1-F5CD-49B9-B5E2-82C894ABA6D1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{BE29DB82-8C80-450C-A120-0CE161BA9AD8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{83BDAA81-5554-43FC-8AAA-6B839CACA812}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.Users.Api", "Tests.Users.Api\Tests.Users.Api.csproj", "{7E9A49BA-D20A-4651-9C2F-83888ABE9194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Api.Tests", "Users.Adapter.Api.Tests\Users.Adapter.Api.Tests.csproj", "{7E9A49BA-D20A-4651-9C2F-83888ABE9194}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests.Users.Handlers", "Tests.Users.Handlers\Tests.Users.Handlers.csproj", "{232EDE6C-84D4-44D1-ABB8-3D563FBEBFA5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{1B7F4476-0F09-4824-A882-E629BEF9EC50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Handlers.Tests", "Users.Adapter.Handlers.Tests\Users.Adapter.Handlers.Tests.csproj", "{232EDE6C-84D4-44D1-ABB8-3D563FBEBFA5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqToDb.Extensions", "LinqToDb.Extensions\LinqToDb.Extensions.csproj", "{CAB52FF8-53DB-48B6-8311-B0D8115B9A7E}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Adapter.Handlers", "External.Handlers\External.Adapter.Handlers.csproj", "{3B22A8C0-B907-492F-8A48-732F376A8685}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Adapter.Api", "External.Api\External.Adapter.Api.csproj", "{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{F341F203-E3E8-4409-A52E-6F21E29D4F9A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{41485EB5-364C-433B-A4E9-CFF22CCF7941}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{4FBBDF98-58E8-40BB-88B7-380B3C5F17F2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Adapter.Api", "External.Adapter.Api\External.Adapter.Api.csproj", "{9C92355E-75EC-4C3C-820F-C7C57C67517A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Adapter.Handlers", "External.Adapter.Handlers\External.Adapter.Handlers.csproj", "{892282B9-157C-4ABF-85F9-D1FACE50BCB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,14 +91,14 @@ Global
 		{CAB52FF8-53DB-48B6-8311-B0D8115B9A7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAB52FF8-53DB-48B6-8311-B0D8115B9A7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAB52FF8-53DB-48B6-8311-B0D8115B9A7E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B22A8C0-B907-492F-8A48-732F376A8685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B22A8C0-B907-492F-8A48-732F376A8685}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B22A8C0-B907-492F-8A48-732F376A8685}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B22A8C0-B907-492F-8A48-732F376A8685}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C92355E-75EC-4C3C-820F-C7C57C67517A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C92355E-75EC-4C3C-820F-C7C57C67517A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C92355E-75EC-4C3C-820F-C7C57C67517A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C92355E-75EC-4C3C-820F-C7C57C67517A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{892282B9-157C-4ABF-85F9-D1FACE50BCB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{892282B9-157C-4ABF-85F9-D1FACE50BCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{892282B9-157C-4ABF-85F9-D1FACE50BCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{892282B9-157C-4ABF-85F9-D1FACE50BCB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,10 +115,10 @@ Global
 		{83BDAA81-5554-43FC-8AAA-6B839CACA812} = {A7588F40-6C05-4731-824D-DE8164A1CDF9}
 		{7E9A49BA-D20A-4651-9C2F-83888ABE9194} = {83BDAA81-5554-43FC-8AAA-6B839CACA812}
 		{232EDE6C-84D4-44D1-ABB8-3D563FBEBFA5} = {83BDAA81-5554-43FC-8AAA-6B839CACA812}
-		{1B7F4476-0F09-4824-A882-E629BEF9EC50} = {ACF1B648-F72E-4744-AB2A-18A9F27E2A42}
 		{CAB52FF8-53DB-48B6-8311-B0D8115B9A7E} = {F341F203-E3E8-4409-A52E-6F21E29D4F9A}
-		{3B22A8C0-B907-492F-8A48-732F376A8685} = {1B7F4476-0F09-4824-A882-E629BEF9EC50}
-		{FFC6C41E-0FDF-4A13-99C1-E8ABDA59544B} = {1B7F4476-0F09-4824-A882-E629BEF9EC50}
+		{4FBBDF98-58E8-40BB-88B7-380B3C5F17F2} = {ACF1B648-F72E-4744-AB2A-18A9F27E2A42}
+		{9C92355E-75EC-4C3C-820F-C7C57C67517A} = {4FBBDF98-58E8-40BB-88B7-380B3C5F17F2}
+		{892282B9-157C-4ABF-85F9-D1FACE50BCB5} = {4FBBDF98-58E8-40BB-88B7-380B3C5F17F2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BEC6354-EE3C-4BBB-90F1-EE74C3D2DD25}

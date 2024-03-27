@@ -38,8 +38,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LinqToDb.Extensions\LinqToDb.Extensions.csproj" />
-    <ProjectReference Include="..\Users.Api\Users.Adapter.Api.csproj" />
-    <ProjectReference Include="..\Users.Handlers\Users.Adapter.Handlers.csproj" />
+    <ProjectReference Include="..\Users.Adapter.Api\Users.Adapter.Api.csproj" />
+    <ProjectReference Include="..\Users.Adapter.Handlers\Users.Adapter.Handlers.csproj" />
   </ItemGroup>
 
 </Project>

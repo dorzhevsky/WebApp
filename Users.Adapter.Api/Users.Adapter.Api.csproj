@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Modularize\Modularize.csproj" />
-    <ProjectReference Include="..\Users.Services\Users.Core.Services.csproj" />
+    <ProjectReference Include="..\Users.Core.Services\Users.Core.Services.csproj" />
   </ItemGroup>
 
 </Project>

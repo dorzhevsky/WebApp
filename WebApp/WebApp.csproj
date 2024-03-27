@@ -14,12 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\External.Api\External.Adapter.Api.csproj" />
-    <ProjectReference Include="..\External.Handlers\External.Adapter.Handlers.csproj" />
+    <ProjectReference Include="..\External.Adapter.Api\External.Adapter.Api.csproj" />
+    <ProjectReference Include="..\External.Adapter.Handlers\External.Adapter.Handlers.csproj" />
     <ProjectReference Include="..\Modularize\Modularize.csproj" />
-    <ProjectReference Include="..\Users.Api\Users.Adapter.Api.csproj" />
-    <ProjectReference Include="..\Users.Handlers\Users.Adapter.Handlers.csproj" />
-    <ProjectReference Include="..\Users.Postgres\Users.Adapter.Postgres.csproj" />
+    <ProjectReference Include="..\Users.Adapter.Api\Users.Adapter.Api.csproj" />
+    <ProjectReference Include="..\Users.Adapter.Handlers\Users.Adapter.Handlers.csproj" />
+    <ProjectReference Include="..\Users.Adapter.Postgres\Users.Adapter.Postgres.csproj" />
   </ItemGroup>
 
 </Project>
