@@ -1,4 +1,7 @@
-﻿using Modularize;
+﻿using LoggerManager;
+using Modularize;
+using NLog;
+using NLog.Extensions.Logging;
 using Rebus.Config;
 using Rebus.Serialization.Json;
 
@@ -12,10 +15,13 @@ namespace WebApp
         {
             _configuration = configuration ??
                throw new ArgumentNullException(nameof(configuration));
+
+            LogManager.Configuration = new NLogLoggingConfiguration(configuration.GetSection("NLog"));
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<ILoggingManager, LoggingManager>();
             services.AddRebus((configurer, _) => 
             configurer.Transport(t => t.UseRabbitMq(_configuration.GetConnectionString("Rabbit"), "webapp")
                       .ExchangeNames(directExchangeName: "WebAppDirect", topicExchangeName: "WebAppTopic"))

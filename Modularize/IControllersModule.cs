@@ -5,6 +5,6 @@ namespace Modularize
 {
     public interface IControllersModule
     {
-        void RegisterControllers(IMvcBuilder builder, IConfiguration _configuration);
+        void RegisterControllers(IMvcBuilder builder, IConfiguration configuration);
     }
 }

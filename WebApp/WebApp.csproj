@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.8" />
     <PackageReference Include="Npgsql" Version="8.0.2" />
     <PackageReference Include="Rebus" Version="8.2.4" />
     <PackageReference Include="Rebus.RabbitMq" Version="9.1.0" />
@@ -16,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\External.Adapter.Api\External.Adapter.Api.csproj" />
     <ProjectReference Include="..\External.Adapter.Handlers\External.Adapter.Handlers.csproj" />
+    <ProjectReference Include="..\LoggerManager\LoggerManager.csproj" />
     <ProjectReference Include="..\Modularize\Modularize.csproj" />
     <ProjectReference Include="..\Users.Adapter.Api\Users.Adapter.Api.csproj" />
     <ProjectReference Include="..\Users.Adapter.Handlers\Users.Adapter.Handlers.csproj" />
