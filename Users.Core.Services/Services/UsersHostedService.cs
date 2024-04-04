@@ -33,10 +33,8 @@ namespace Users.Core.Services.Services
             var actorSystemSetup = bootstrap.And(diSetup);
 
             _actorSystem = ActorSystem.Create("users-processing", actorSystemSetup);
-
-            var usersProcessorActor = DependencyResolver.For(_actorSystem).Props<UsersProcessorActor>();
-
-            _actorRef = _actorSystem.ActorOf(usersProcessorActor, "users-processor");
+            var props = DependencyResolver.For(_actorSystem).Props<SupervisorActor>();
+            _actorRef = _actorSystem.ActorOf(props, "users-supervisor");
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)

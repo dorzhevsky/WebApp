@@ -22,11 +22,11 @@ namespace WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<ILoggingManager, LoggingManager>();
-            services.AddRebus((configurer, _) => 
-            configurer.Transport(t => t.UseRabbitMq(_configuration.GetConnectionString("Rabbit"), "webapp")
-                      .ExchangeNames(directExchangeName: "WebAppDirect", topicExchangeName: "WebAppTopic"))
-                      .Serialization(s => s.UseNewtonsoftJson(JsonInteroperabilityMode.FullTypeInformation))
-                      .Options(o => {}));
+            //services.AddRebus((configurer, _) => 
+            //configurer.Transport(t => t.UseRabbitMq(_configuration.GetConnectionString("Rabbit"), "webapp")
+            //          .ExchangeNames(directExchangeName: "WebAppDirect", topicExchangeName: "WebAppTopic"))
+            //          .Serialization(s => s.UseNewtonsoftJson(JsonInteroperabilityMode.FullTypeInformation))
+            //          .Options(o => {}));
 
             services.AddModularizer(_configuration, 
                 typeof(Users.Adapter.Api.Modularize.Modules).Assembly,                

@@ -1,20 +1,19 @@
 ﻿using Akka.Actor;
+using Akka.DependencyInjection;
 using Akka.Event;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using Users.Core.Services.Interfaces;
-using Users.Core.Services.Messages;
 
 namespace Users.Core.Services.Services
 {
-    internal class UsersProcessorActor : ReceiveActor
+    internal class SupervisorActor : ReceiveActor
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly IServiceScope _scope;
 
         protected ILoggingAdapter Log { get; } = Context.GetLogger();
 
-        public UsersProcessorActor(IServiceProvider serviceProvider)
+        public SupervisorActor(IServiceProvider serviceProvider)
         {
             _serviceProvider = serviceProvider;
             _scope = _serviceProvider.CreateScope();
@@ -24,10 +23,13 @@ namespace Users.Core.Services.Services
 
         private void HandleProcessUsers(ProcessUsers message)
         {
-            throw new Exception();
-            var mediator = _scope.ServiceProvider.GetRequiredService<IMediator>();
-            mediator.Publish(new UpdateUsers());
+            var props = DependencyResolver.For(Context.System).Props<UsersProcessorActor>();
+            var usersProcessorActor = Context.ActorOf(props, $"users-processor");
+            usersProcessorActor.Tell(message);
         }
+
+        protected override SupervisorStrategy SupervisorStrategy() 
+            => Akka.Actor.SupervisorStrategy.StoppingStrategy;
 
         protected override void PreStart()
         {
