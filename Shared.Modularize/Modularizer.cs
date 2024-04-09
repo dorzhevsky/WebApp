@@ -13,13 +13,7 @@ namespace Shared.Modularize
             var allTypes = (from a in assemblies from t in a.GetTypes() select t).ToList();
 
 
-            IMvcBuilder builder = services.AddControllers();
-
-            (
-                from t in allTypes
-                where typeof(IControllersModule).IsAssignableFrom(t) && !t.IsAbstract
-                select (IControllersModule?)Activator.CreateInstance(t)
-            ).Each(module => module.RegisterControllers(builder, configuration));
+            services.AddControllers();
 
             (
                 from t in allTypes
@@ -34,13 +28,16 @@ namespace Shared.Modularize
                 select (IServicesModule?)Activator.CreateInstance(t)
             ).Each(module => module.RegisterServices(services, configuration));
 
+
             services.AddMediatR(cfg =>
             {
-                (
+                var mediatrModules = (
                     from t in allTypes
                     where typeof(IMediatrModule).IsAssignableFrom(t) && !t.IsAbstract
                     select (IMediatrModule?)Activator.CreateInstance(t)
-                ).Each(module => module.RegisterMediatrHandlers(cfg, configuration));
+                );
+                if (mediatrModules.Any())
+                    mediatrModules.Each(module => module.RegisterMediatrHandlers(cfg, configuration));
             });
 
             (
@@ -55,10 +52,9 @@ namespace Shared.Modularize
             var entry = Assembly.GetEntryAssembly();
             if (entry is not null)
             {
-                var pathToAssemblies = Path.GetDirectoryName(entry.Location);
-                var files = Directory.GetFiles(pathToAssemblies!)
-                        .Where(f => f.EndsWith("dll") && f.Contains("Modules"));
-                var assemblies = files.Select(e => Assembly.LoadFrom(e));
+                var assemblies = Directory.GetFiles(Path.GetDirectoryName(entry.Location)!)
+                                          .Where(f => f.EndsWith("dll") && f.Contains("Modules"))
+                                          .Select(e => Assembly.LoadFrom(e));
                 services.AddModularizer(configuration, assemblies.ToArray());
             }
         }

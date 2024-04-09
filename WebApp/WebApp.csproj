@@ -18,7 +18,6 @@
     <ProjectReference Include="..\Modules.External.Adapter.Api\Modules.External.Adapter.Api.csproj" />
     <ProjectReference Include="..\Modules.Users.Adapter.Api\Modules.Users.Adapter.Api.csproj" />
     <ProjectReference Include="..\Modules.Users.Adapter.Handlers\Modules.Users.Adapter.Handlers.csproj" />
-    <ProjectReference Include="..\Modules.Users.Adapter.Postgres\Modules.Users.Adapter.Postgres.csproj" />
     <ProjectReference Include="..\Shared.LoggerManager\Shared.LoggerManager.csproj" />
     <ProjectReference Include="..\Shared.Modularize\Shared.Modularize.csproj" />
   </ItemGroup>
