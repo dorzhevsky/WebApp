@@ -1,7 +1,6 @@
 ﻿using Domain.Contracts.Modules.Users;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Modules.Users.Adapter.Handlers;
 using Modules.Users.Core.Domain;
 using Nelibur.ObjectMapper;
 using Rebus.Config;
@@ -14,9 +13,7 @@ namespace Modules.Users.Adapter.Handlers.Modularize
         public class MediatrModule : IMediatrModule
         {
             public void RegisterMediatrHandlers(MediatRServiceConfiguration cfg, IConfiguration configuration)
-            {
-                cfg.RegisterServicesFromAssemblies(typeof(ExternalNotificationdHandler).Assembly);
-            }
+                => cfg.RegisterServicesFromAssemblies(typeof(ExternalNotificationdHandler).Assembly);
         }
 
         public class MappingModule : IMappingModule
@@ -30,9 +27,7 @@ namespace Modules.Users.Adapter.Handlers.Modularize
         public class ServicesModule : IServicesModule
         {
             public void RegisterServices(IServiceCollection services, IConfiguration configuration)
-            {
-                services.AutoRegisterHandlersFromAssembly(typeof(ProcessUsersHandler).Assembly);
-            }
+                => services.AutoRegisterHandlersFromAssembly(typeof(ProcessUsersHandler).Assembly);
         }
     }
 }
