@@ -15,13 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\External.Adapter.Api\External.Adapter.Api.csproj" />
-    <ProjectReference Include="..\External.Adapter.Handlers\External.Adapter.Handlers.csproj" />
-    <ProjectReference Include="..\LoggerManager\LoggerManager.csproj" />
-    <ProjectReference Include="..\Modularize\Modularize.csproj" />
-    <ProjectReference Include="..\Users.Adapter.Api\Users.Adapter.Api.csproj" />
-    <ProjectReference Include="..\Users.Adapter.Handlers\Users.Adapter.Handlers.csproj" />
-    <ProjectReference Include="..\Users.Adapter.Postgres\Users.Adapter.Postgres.csproj" />
+    <ProjectReference Include="..\Modules.External.Adapter.Api\Modules.External.Adapter.Api.csproj" />
+    <ProjectReference Include="..\Modules.Users.Adapter.Api\Modules.Users.Adapter.Api.csproj" />
+    <ProjectReference Include="..\Modules.Users.Adapter.Handlers\Modules.Users.Adapter.Handlers.csproj" />
+    <ProjectReference Include="..\Modules.Users.Adapter.Postgres\Modules.Users.Adapter.Postgres.csproj" />
+    <ProjectReference Include="..\Shared.LoggerManager\Shared.LoggerManager.csproj" />
+    <ProjectReference Include="..\Shared.Modularize\Shared.Modularize.csproj" />
   </ItemGroup>
 
 </Project>

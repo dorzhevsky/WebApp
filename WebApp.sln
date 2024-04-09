@@ -9,27 +9,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "modules", "modules", "{ACF1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "users", "users", "{A7588F40-6C05-4731-824D-DE8164A1CDF9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modularize", "Modularize\Modularize.csproj", "{761CBA53-0481-495F-A1AA-100C2C365900}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Modularize", "Shared.Modularize\Shared.Modularize.csproj", "{761CBA53-0481-495F-A1AA-100C2C365900}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Api", "Users.Adapter.Api\Users.Adapter.Api.csproj", "{98947192-377F-4B1B-9606-F26E5D073376}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Users.Adapter.Api", "Modules.Users.Adapter.Api\Modules.Users.Adapter.Api.csproj", "{98947192-377F-4B1B-9606-F26E5D073376}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Core.Services", "Users.Core.Services\Users.Core.Services.csproj", "{17A722C4-2A21-47CD-B3A1-4A60FB3B6B87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Users.Core.Services", "Modules.Users.Core.Services\Modules.Users.Core.Services.csproj", "{17A722C4-2A21-47CD-B3A1-4A60FB3B6B87}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Core.Domain", "Users.Core.Domain\Users.Core.Domain.csproj", "{C20DF2D8-C11A-4F6F-8F5B-5E41E3154FA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Users.Core.Domain", "Modules.Users.Core.Domain\Modules.Users.Core.Domain.csproj", "{C20DF2D8-C11A-4F6F-8F5B-5E41E3154FA8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Postgres", "Users.Adapter.Postgres\Users.Adapter.Postgres.csproj", "{E5987BD6-3658-46B0-933B-CBA894119A54}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Users.Adapter.Postgres", "Modules.Users.Adapter.Postgres\Modules.Users.Adapter.Postgres.csproj", "{E5987BD6-3658-46B0-933B-CBA894119A54}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Handlers", "Users.Adapter.Handlers\Users.Adapter.Handlers.csproj", "{492EBDC1-F5CD-49B9-B5E2-82C894ABA6D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Users.Adapter.Handlers", "Modules.Users.Adapter.Handlers\Modules.Users.Adapter.Handlers.csproj", "{492EBDC1-F5CD-49B9-B5E2-82C894ABA6D1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{BE29DB82-8C80-450C-A120-0CE161BA9AD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain.Contracts", "Domain.Contracts\Domain.Contracts.csproj", "{BE29DB82-8C80-450C-A120-0CE161BA9AD8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{83BDAA81-5554-43FC-8AAA-6B839CACA812}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Api.Tests", "Users.Adapter.Api.Tests\Users.Adapter.Api.Tests.csproj", "{7E9A49BA-D20A-4651-9C2F-83888ABE9194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Users.Adapter.Api.Tests", "Modules.Users.Adapter.Api.Tests\Modules.Users.Adapter.Api.Tests.csproj", "{7E9A49BA-D20A-4651-9C2F-83888ABE9194}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Users.Adapter.Handlers.Tests", "Users.Adapter.Handlers.Tests\Users.Adapter.Handlers.Tests.csproj", "{232EDE6C-84D4-44D1-ABB8-3D563FBEBFA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.Users.Adapter.Handlers.Tests", "Modules.Users.Adapter.Handlers.Tests\Modules.Users.Adapter.Handlers.Tests.csproj", "{232EDE6C-84D4-44D1-ABB8-3D563FBEBFA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqToDb.Extensions", "LinqToDb.Extensions\LinqToDb.Extensions.csproj", "{CAB52FF8-53DB-48B6-8311-B0D8115B9A7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.LinqToDb.Extensions", "Shared.LinqToDb.Extensions\Shared.LinqToDb.Extensions.csproj", "{CAB52FF8-53DB-48B6-8311-B0D8115B9A7E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__shared__", "__shared__", "{F341F203-E3E8-4409-A52E-6F21E29D4F9A}"
 EndProject
@@ -37,11 +37,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "__domain__", "__domain__", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{4FBBDF98-58E8-40BB-88B7-380B3C5F17F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Adapter.Api", "External.Adapter.Api\External.Adapter.Api.csproj", "{9C92355E-75EC-4C3C-820F-C7C57C67517A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.External.Adapter.Api", "Modules.External.Adapter.Api\Modules.External.Adapter.Api.csproj", "{9C92355E-75EC-4C3C-820F-C7C57C67517A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "External.Adapter.Handlers", "External.Adapter.Handlers\External.Adapter.Handlers.csproj", "{892282B9-157C-4ABF-85F9-D1FACE50BCB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.External.Adapter.Handlers", "Modules.External.Adapter.Handlers\Modules.External.Adapter.Handlers.csproj", "{892282B9-157C-4ABF-85F9-D1FACE50BCB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerManager", "LoggerManager\LoggerManager.csproj", "{5D051170-3781-42B1-8E8A-28C70B22624A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.LoggerManager", "Shared.LoggerManager\Shared.LoggerManager.csproj", "{5D051170-3781-42B1-8E8A-28C70B22624A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

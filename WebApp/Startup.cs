@@ -1,9 +1,7 @@
-﻿using LoggerManager;
-using Modularize;
-using NLog;
+﻿using NLog;
 using NLog.Extensions.Logging;
-using Rebus.Config;
-using Rebus.Serialization.Json;
+using Shared.LoggerManager;
+using Shared.Modularize;
 
 namespace WebApp
 {
@@ -28,14 +26,9 @@ namespace WebApp
             //          .Serialization(s => s.UseNewtonsoftJson(JsonInteroperabilityMode.FullTypeInformation))
             //          .Options(o => {}));
 
-            services.AddModularizer(_configuration, 
-                typeof(Users.Adapter.Api.Modularize.Modules).Assembly,                
-                typeof(Users.Core.Services.Modularize.Modules).Assembly,
-                typeof(Users.Adapter.Handlers.Modularize.Modules).Assembly,
-                typeof(Users.Adapter.Postgres.Modularize.Modules).Assembly,                
-                typeof(External.Adapter.Api.Modularize.Modules).Assembly,
-                typeof(External.Adapter.Handlers.Modularize.Modules).Assembly
-            );
+            // pathToBinDebug = Weather.Api/bin/Debug/netcoreapp3.1
+
+            services.AddModularizer(_configuration);
         }
 
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
