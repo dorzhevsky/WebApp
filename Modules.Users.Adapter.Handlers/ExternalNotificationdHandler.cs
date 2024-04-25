@@ -1,6 +1,7 @@
 ﻿using Domain.Contracts.Modules.External;
 using MediatR;
 using Modules.Users.Core.Services.Interfaces;
+using System.Diagnostics;
 
 namespace Modules.Users.Adapter.Handlers
 {

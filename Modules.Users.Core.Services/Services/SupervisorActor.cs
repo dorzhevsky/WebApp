@@ -2,11 +2,11 @@
 using Akka.DependencyInjection;
 using Akka.Event;
 using Microsoft.Extensions.DependencyInjection;
-using Modules.Users.Core.Services.Interfaces;
+using Modules.Users.Core.Services.Messages;
 
 namespace Modules.Users.Core.Services.Services
 {
-    internal class SupervisorActor : ReceiveActor
+    internal class SupervisorActor : TracedReceiveActor
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly IServiceScope _scope;
@@ -18,7 +18,7 @@ namespace Modules.Users.Core.Services.Services
             _serviceProvider = serviceProvider;
             _scope = _serviceProvider.CreateScope();
 
-            Receive<ProcessUsers>(HandleProcessUsers);
+            Receive<ProcessUsersMessage>(HandleProcessUsers);
             Receive<Terminated>(HanldeTerminated);
             Receive<string>(HandleStr);
         }
@@ -33,7 +33,8 @@ namespace Modules.Users.Core.Services.Services
             throw new NotImplementedException();
         }
 
-        private void HandleProcessUsers(ProcessUsers message)
+
+        private void HandleProcessUsers(ProcessUsersMessage message)
         {
             var props = DependencyResolver.For(Context.System).Props<UsersProcessorActor>();
             var usersProcessorActor = Context.ActorOf(props, $"users-processor");

@@ -1,3 +1,4 @@
+using NLog.Web;
 using WebApp;
 
 public class Program
@@ -12,5 +13,11 @@ public class Program
             .ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseStartup<Startup>();
-            });
+            })
+        .ConfigureLogging(logging =>
+        {
+            logging.ClearProviders();
+            logging.SetMinimumLevel(LogLevel.Trace);
+        })
+        .UseNLog();
 }

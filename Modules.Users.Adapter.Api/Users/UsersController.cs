@@ -1,17 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Modules.Users.Core.Services.Interfaces;
-using Shared.LoggerManager;
 
 namespace Modules.Users.Adapter.Api.Users
 {
     public class UsersController : Controller
     {
-        private readonly ILoggingManager _logger;
         private readonly IUsersService _service;
 
-        public UsersController(IUsersService service, ILoggingManager logger)
+        public UsersController(IUsersService service)
         {
-            _logger = logger;
             _service = service;
         }
 
@@ -27,7 +24,6 @@ namespace Modules.Users.Adapter.Api.Users
         [HttpGet]
         public async Task<IActionResult> GetDataFromDatabase()
         {
-            _logger.LogDebug("Debug1");
             var data = await _service.GetUsers();
             return Json(data);
         }

@@ -41,8 +41,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.External.Adapter.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modules.External.Adapter.Handlers", "Modules.External.Adapter.Handlers\Modules.External.Adapter.Handlers.csproj", "{892282B9-157C-4ABF-85F9-D1FACE50BCB5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.LoggerManager", "Shared.LoggerManager\Shared.LoggerManager.csproj", "{5D051170-3781-42B1-8E8A-28C70B22624A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -101,10 +99,6 @@ Global
 		{892282B9-157C-4ABF-85F9-D1FACE50BCB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{892282B9-157C-4ABF-85F9-D1FACE50BCB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{892282B9-157C-4ABF-85F9-D1FACE50BCB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D051170-3781-42B1-8E8A-28C70B22624A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D051170-3781-42B1-8E8A-28C70B22624A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D051170-3781-42B1-8E8A-28C70B22624A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D051170-3781-42B1-8E8A-28C70B22624A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,7 +119,6 @@ Global
 		{4FBBDF98-58E8-40BB-88B7-380B3C5F17F2} = {ACF1B648-F72E-4744-AB2A-18A9F27E2A42}
 		{9C92355E-75EC-4C3C-820F-C7C57C67517A} = {4FBBDF98-58E8-40BB-88B7-380B3C5F17F2}
 		{892282B9-157C-4ABF-85F9-D1FACE50BCB5} = {4FBBDF98-58E8-40BB-88B7-380B3C5F17F2}
-		{5D051170-3781-42B1-8E8A-28C70B22624A} = {F341F203-E3E8-4409-A52E-6F21E29D4F9A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BEC6354-EE3C-4BBB-90F1-EE74C3D2DD25}

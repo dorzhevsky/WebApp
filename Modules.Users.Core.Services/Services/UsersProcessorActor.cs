@@ -1,17 +1,19 @@
 ﻿using Akka.Actor;
 using Akka.Event;
-using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Modules.Users.Core.Services.Interfaces;
+using Microsoft.Extensions.Logging;
+using Modules.Users.Core.Services.Messages;
+using NLog;
 using System.Threading.Tasks.Dataflow;
 
 namespace Modules.Users.Core.Services.Services
 {
-    internal class UsersProcessorActor : ReceiveActor
+    internal class UsersProcessorActor : TracedReceiveActor
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly IServiceScope _scope;
         private ActionBlock<int> _actionBlock;
+        private NLog.ILogger logger = LogManager.GetCurrentClassLogger();
 
         protected ILoggingAdapter Log { get; } = Context.GetLogger();
 
@@ -20,7 +22,7 @@ namespace Modules.Users.Core.Services.Services
             _serviceProvider = serviceProvider;
             _scope = _serviceProvider.CreateScope();
 
-            Receive<ProcessUsers>(HandleProcessUsers);
+            Receive<ProcessUsersMessage>(HandleProcessUsers);
             Receive<Status.Failure>(HandleFailure);
             _actionBlock = new ActionBlock<int>(OnAction);
             _actionBlock.Completion.PipeTo(Self);
@@ -37,8 +39,9 @@ namespace Modules.Users.Core.Services.Services
             throw new Exception();
         }
 
-        private void HandleProcessUsers(ProcessUsers message)
+        private void HandleProcessUsers(ProcessUsersMessage message)
         {
+            logger.Info("Something");
             //throw new Exception();
             _actionBlock.Post(0);
             //Context.Stop(Self);

@@ -2,6 +2,7 @@
 using Akka.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Modules.Users.Core.Services.Interfaces;
+using Modules.Users.Core.Services.Messages;
 
 namespace Modules.Users.Core.Services.Services
 {
@@ -24,13 +25,15 @@ namespace Modules.Users.Core.Services.Services
             //var hocon = ConfigurationFactory.ParseString(
             //        await File.ReadAllTextAsync("app.conf", cancellationToken));
 
-            var bootstrap = BootstrapSetup.Create();//.WithConfig(hocon);
+            var bootstrap = BootstrapSetup.Create();
 
             // enable DI support inside this ActorSystem, if needed
             var diSetup = DependencyResolverSetup.Create(_serviceProvider);
 
             // merge this setup (and any others) together into ActorSystemSetup
             var actorSystemSetup = bootstrap.And(diSetup);
+
+
 
             _actorSystem = ActorSystem.Create("users-processing", actorSystemSetup);
             var props = DependencyResolver.For(_actorSystem).Props<SupervisorActor>();
@@ -46,7 +49,7 @@ namespace Modules.Users.Core.Services.Services
 
         public void Tell(object message)
         {
-            _actorRef?.Tell(message);
+            _actorRef?.Tell(new ProcessUsersMessage());
         }
     }
 }

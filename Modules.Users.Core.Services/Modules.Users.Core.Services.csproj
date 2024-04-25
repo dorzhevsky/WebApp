@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Akka" Version="1.5.18" />
     <PackageReference Include="Akka.DependencyInjection" Version="1.5.18" />
+    <PackageReference Include="Akka.Logger.NLog" Version="1.5.13" />
     <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
     <PackageReference Include="Scrutor" Version="4.2.2" />
